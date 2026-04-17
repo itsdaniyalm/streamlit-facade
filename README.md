@@ -2,7 +2,7 @@
 
 **streamlit but different**
 
-facade is a shadcn-inspired, themeable UI component library for Streamlit. Define your colors, fonts, and radius once — every component picks it up automatically.
+facade is a shadcn-inspired, themeable UI component library for Streamlit. Define your colors, fonts, and radius once every component picks it up automatically.
 
 ```python
 pip install streamlit-facade
@@ -32,7 +32,7 @@ facade.Card(title="facade", description="streamlit but different")
 
 ## Why facade?
 
-Streamlit is powerful but opinionated about looks. facade gives you a proper design token system — one `theme.apply()` call and your entire app gets a consistent, professional look without touching CSS.
+Streamlit is powerful but opinionated about looks. facade gives you a proper design token system one `theme.apply()` call and your entire app gets a consistent, professional look without touching CSS.
 
 - **No build pipeline** — pure Python, no Node, no npm, no React
 - **shadcn-inspired** — clean, minimal components modeled after the best design system in the React ecosystem
@@ -129,7 +129,7 @@ st.dataframe(df, use_container_width=True)  # themed automatically
 
 ## Icons
 
-facade uses a unified icon system — one name works everywhere:
+facade uses a unified icon system one name works everywhere:
 
 ```python
 # In components
@@ -144,7 +144,7 @@ svg = icon_html("circle-check", size=16, color="var(--primary)")
 facade.icon_names()
 ```
 
-Button icons use Material Symbols (native Streamlit). HTML component icons use Lucide SVGs. facade handles the translation — you always use the same name.
+Button icons use Material Symbols (native Streamlit). HTML component icons use Lucide SVGs. facade handles the translation you always use the same name.
 
 ---
 
