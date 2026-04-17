@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: streamlit-facade
-Version: 0.1.0
+Version: 0.1.1
 Summary: streamlit but different
 Author: Daniyal M
 License: MIT
@@ -65,7 +65,7 @@ Streamlit is powerful but opinionated about looks. facade gives you a proper des
 - **shadcn-inspired** — clean, minimal components modeled after the best design system in the React ecosystem
 - **Token system** — define colors once, every component inherits automatically
 - **Dark mode** — every preset ships with a light and dark variant
-- **Lucide icons** — 1500+ icons available via `facade.Icon()`
+- **76 named icons** — unified icon registry; use the same name in every component. Full Lucide library (1500+ icons) also available via `facade.Icon()`
 
 ---
 
@@ -97,7 +97,7 @@ facade.theme.apply(
 | `carbon-light` | Electric lime, warm white |
 | `carbon-dark` | Electric lime, pure dark |
 | `carbon-amber` | Amber accent, warm carbon |
-| `daniyal` | Navy brand theme |
+| `burgundy` | Deep burgundy, warm neutral |
 
 ---
 
@@ -106,6 +106,7 @@ facade.theme.apply(
 ### Form
 ```python
 facade.Button("Click me", variant="default", icon="save")
+facade.LinkButton("GitHub", url="https://github.com", variant="outline", icon="external-link")
 facade.Input(label="Email", placeholder="you@example.com")
 facade.Select(options=["A", "B", "C"], placeholder="Pick one")
 facade.Textarea(label="Message", placeholder="Write something...")
@@ -156,18 +157,19 @@ st.dataframe(df, use_container_width=True)  # themed automatically
 
 ## Icons
 
-facade uses a unified icon system — one name works everywhere:
+facade ships a registry of **76 named icons** that work everywhere — buttons, alerts, accordions, toasts. One name, consistent across all components:
 
 ```python
 # In components
 facade.Button("Save", icon="save")
-facade.Alert("Done", variant="success")  # icon auto-selected
+facade.Button("Delete", icon="trash", variant="destructive")
+facade.Alert("Done", variant="success")  # icon auto-selected by variant
 
-# Standalone SVG (for custom HTML)
+# Standalone Lucide SVG (for custom HTML layouts)
 from facade.lucide import icon_html
 svg = icon_html("circle-check", size=16, color="var(--primary)")
 
-# See all available icons
+# See all 76 registered icon names
 facade.icon_names()
 ```
 

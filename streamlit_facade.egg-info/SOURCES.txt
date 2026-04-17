@@ -15,6 +15,7 @@ facade/components/card.py
 facade/components/checkbox.py
 facade/components/datepicker.py
 facade/components/input.py
+facade/components/linkbutton.py
 facade/components/metric.py
 facade/components/progress.py
 facade/components/radio.py

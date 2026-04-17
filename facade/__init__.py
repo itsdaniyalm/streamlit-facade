@@ -22,6 +22,7 @@ from facade.components.accordion import Accordion
 from facade.components.toast import Toast
 from facade.components.progress import Progress
 from facade.components.topbar import TopBar
+from facade.components.linkbutton import LinkButton
 
 class theme:
     apply = staticmethod(_apply)
@@ -31,5 +32,5 @@ __all__ = [
     "theme", "Button", "Card", "Input", "Select", "Sidebar", "Alert",
     "Icon", "icon_names", "to_material", "to_lucide", "Textarea", "Checkbox",
     "Radio","Toggle","Slider","DatePicker", "Badge", "Metric", "Separator",
-    "Spinner","Tabs","Accordion", "Toast", "Progress", "TopBar"
+    "Spinner","Tabs","Accordion", "Toast", "Progress", "TopBar", "LinkButton"
 ]

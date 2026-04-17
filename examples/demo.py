@@ -45,7 +45,7 @@ with facade.Sidebar(
     logo="examples/logo.png",
     logo_width=250,
     #title="Streamlit Facade",
-    footer="streamlit-facade v0.1.0",
+    footer="streamlit-facade v0.1.1",
     active=st.session_state.page,
     nav_keys=NAV_KEYS,
 ):
