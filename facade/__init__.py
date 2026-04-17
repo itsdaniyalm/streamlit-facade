@@ -23,14 +23,16 @@ from facade.components.toast import Toast
 from facade.components.progress import Progress
 from facade.components.topbar import TopBar
 from facade.components.linkbutton import LinkButton
+from facade.components.iconcard import IconCard
 
 class theme:
     apply = staticmethod(_apply)
 
-__version__ = "0.1.0"
+__version__ = "0.1.2"
 __all__ = [
     "theme", "Button", "Card", "Input", "Select", "Sidebar", "Alert",
     "Icon", "icon_names", "to_material", "to_lucide", "Textarea", "Checkbox",
     "Radio","Toggle","Slider","DatePicker", "Badge", "Metric", "Separator",
-    "Spinner","Tabs","Accordion", "Toast", "Progress", "TopBar", "LinkButton"
+    "Spinner","Tabs","Accordion", "Toast", "Progress", "TopBar", "LinkButton",
+    "IconCard"
 ]

@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: streamlit-facade
-Version: 0.1.1
+Version: 0.1.2
 Summary: streamlit but different
 Author: Daniyal M
 License: MIT
@@ -29,7 +29,7 @@ Dynamic: license-file
 
 **streamlit but different**
 
-facade is a shadcn-inspired, themeable UI component library for Streamlit. Define your colors, fonts, and radius once — every component picks it up automatically.
+facade is a shadcn-inspired, themeable UI component library for Streamlit. Define your colors, fonts, and radius once every component picks it up automatically.
 
 ```python
 pip install streamlit-facade
@@ -59,13 +59,13 @@ facade.Card(title="facade", description="streamlit but different")
 
 ## Why facade?
 
-Streamlit is powerful but opinionated about looks. facade gives you a proper design token system — one `theme.apply()` call and your entire app gets a consistent, professional look without touching CSS.
+Streamlit is powerful but opinionated about looks. facade gives you a proper design token system one `theme.apply()` call and your entire app gets a consistent, professional look without touching CSS.
 
 - **No build pipeline** — pure Python, no Node, no npm, no React
 - **shadcn-inspired** — clean, minimal components modeled after the best design system in the React ecosystem
 - **Token system** — define colors once, every component inherits automatically
 - **Dark mode** — every preset ships with a light and dark variant
-- **76 named icons** — unified icon registry; use the same name in every component. Full Lucide library (1500+ icons) also available via `facade.Icon()`
+- **Lucide icons** — 1500+ icons available via `facade.Icon()`
 
 ---
 
@@ -97,7 +97,7 @@ facade.theme.apply(
 | `carbon-light` | Electric lime, warm white |
 | `carbon-dark` | Electric lime, pure dark |
 | `carbon-amber` | Amber accent, warm carbon |
-| `burgundy` | Deep burgundy, warm neutral |
+| `daniyal` | Navy brand theme |
 
 ---
 
@@ -106,7 +106,6 @@ facade.theme.apply(
 ### Form
 ```python
 facade.Button("Click me", variant="default", icon="save")
-facade.LinkButton("GitHub", url="https://github.com", variant="outline", icon="external-link")
 facade.Input(label="Email", placeholder="you@example.com")
 facade.Select(options=["A", "B", "C"], placeholder="Pick one")
 facade.Textarea(label="Message", placeholder="Write something...")
@@ -157,23 +156,22 @@ st.dataframe(df, use_container_width=True)  # themed automatically
 
 ## Icons
 
-facade ships a registry of **76 named icons** that work everywhere — buttons, alerts, accordions, toasts. One name, consistent across all components:
+facade uses a unified icon system one name works everywhere:
 
 ```python
 # In components
 facade.Button("Save", icon="save")
-facade.Button("Delete", icon="trash", variant="destructive")
-facade.Alert("Done", variant="success")  # icon auto-selected by variant
+facade.Alert("Done", variant="success")  # icon auto-selected
 
-# Standalone Lucide SVG (for custom HTML layouts)
+# Standalone SVG (for custom HTML)
 from facade.lucide import icon_html
 svg = icon_html("circle-check", size=16, color="var(--primary)")
 
-# See all 76 registered icon names
+# See all available icons
 facade.icon_names()
 ```
 
-Button icons use Material Symbols (native Streamlit). HTML component icons use Lucide SVGs. facade handles the translation — you always use the same name.
+Button icons use Material Symbols (native Streamlit). HTML component icons use Lucide SVGs. facade handles the translation you always use the same name.
 
 ---
 
