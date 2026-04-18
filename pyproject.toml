@@ -34,8 +34,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/itsdaniyalm/streamlit-facade"
-Documentation = "https://github.com/itsdaniyalm/streamlit-facade"
+Homepage = "https://facade-docs.streamlit.app/"
+Documentation = "https://facade-docs.streamlit.app/"
 Repository = "https://github.com/itsdaniyalm/streamlit-facade"
 "Bug Tracker" = "https://github.com/itsdaniyalm/streamlit-facade/issues"
 
