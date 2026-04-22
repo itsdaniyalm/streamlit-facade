@@ -8,6 +8,6 @@ def Select(options: List[str], placeholder: str = "Select...", label: str = None
         label or placeholder,
         choices,
         key=key,
-        label_visibility="collapsed"
+        label_visibility= "visible" if label else "collapsed"
     )
     return result if result != placeholder else None
