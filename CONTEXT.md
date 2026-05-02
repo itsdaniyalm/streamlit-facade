@@ -855,7 +855,7 @@ elif st.session_state.page == "Settings":
 ## Package Info
 
 - **PyPI**: `pip install streamlit-facade`
-- **Version**: 0.1.5
+- **Version**: 0.1.6
 - **GitHub**: https://github.com/itsdaniyalm/streamlit-facade
 - **Requires**: Python 3.8+, Streamlit 1.35.0+
 - **License**: MIT

@@ -217,7 +217,7 @@ def _write_config(preset_name: str, tokens: dict, base: str = None) -> bool:
         f'base = "{resolved_base}"\n'
         f'primaryColor = "{tokens["primary"]}"\n'
         f'backgroundColor = "{tokens["background"]}"\n'
-        f'secondaryBackgroundColor = "{tokens["background"]}"\n'
+        f'secondaryBackgroundColor = "{tokens["muted"]}"\n'
         f'textColor = "{tokens["foreground"]}"\n'
     )
 
