@@ -24,15 +24,16 @@ from facade.components.progress import Progress
 from facade.components.topbar import TopBar
 from facade.components.linkbutton import LinkButton
 from facade.components.iconcard import IconCard
+from facade.components.styledcontainer import StyledContainer
 
 class theme:
     apply = staticmethod(_apply)
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 __all__ = [
     "theme", "Button", "Card", "Input", "Select", "Sidebar", "Alert",
     "Icon", "icon_names", "to_material", "to_lucide", "Textarea", "Checkbox",
     "Radio","Toggle","Slider","DatePicker", "Badge", "Metric", "Separator",
     "Spinner","Tabs","Accordion", "Toast", "Progress", "TopBar", "LinkButton",
-    "IconCard"
+    "IconCard", "StyledContainer"
 ]

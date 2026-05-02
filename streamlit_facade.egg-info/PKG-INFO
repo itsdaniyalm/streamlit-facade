@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: streamlit-facade
-Version: 0.1.3
+Version: 0.1.4
 Summary: streamlit but different
 Author: Daniyal M
 License: MIT
@@ -9,7 +9,7 @@ Project-URL: Documentation, https://facade-docs.streamlit.app/
 Project-URL: Repository, https://github.com/itsdaniyalm/streamlit-facade
 Project-URL: Bug Tracker, https://github.com/itsdaniyalm/streamlit-facade/issues
 Keywords: streamlit,ui,components,theme,design,shadcn,dashboard
-Classifier: Development Status :: 3 - Alpha
+Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Developers
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python :: 3

@@ -25,6 +25,7 @@ facade/components/separator.py
 facade/components/sidebar.py
 facade/components/slider.py
 facade/components/spinner.py
+facade/components/styledcontainer.py
 facade/components/tabs.py
 facade/components/textarea.py
 facade/components/toast.py
