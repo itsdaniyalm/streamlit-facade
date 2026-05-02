@@ -372,6 +372,66 @@ facade.IconCard(title="Token system", description="Define once, inherit everywhe
 
 ---
 
+### StyledContainer
+
+A styled `st.container()` wrapper with configurable borders, background, and radius.
+Use it to group any Streamlit components inside a visually distinct card.
+`key` is required — it is the CSS scoping anchor via `.st-key-{key}`.
+
+```python
+with facade.StyledContainer(
+    border: str = "all",                        # "top" | "bottom" | "left" | "right" | "all" | "none"
+    border_color: str = "var(--border)",        # accent border color (hex, rgba, or CSS var)
+    border_width: str = "2px",                  # accent border thickness
+    border_surround_color: str = "var(--border)", # color for the other 3 sides when border != "all"
+    background: str = "var(--background)",
+    radius: str = "var(--radius)",
+    padding: str = "1.25rem 1.5rem",
+    key: str = None,                            # REQUIRED
+):
+    # any Streamlit content here
+```
+
+```python
+# Top accent border (e.g. status card)
+with facade.StyledContainer(
+    border="top",
+    border_color="#e05252",
+    border_width="3px",
+    key="card_critical",
+):
+    facade.Badge("Critical", variant="error")
+    st.markdown("### $43.8M")
+    st.caption("493 patients")
+
+# Left accent border
+with facade.StyledContainer(
+    border="left",
+    border_color="var(--primary)",
+    border_width="4px",
+    key="card_info",
+):
+    st.markdown("**Left accent border**")
+
+# Full border with custom background
+with facade.StyledContainer(
+    border="all",
+    background="var(--muted)",
+    key="card_muted",
+):
+    st.markdown("Muted background card")
+
+# No border, custom background only
+with facade.StyledContainer(
+    border="none",
+    background="#FFF7ED",
+    key="card_warm",
+):
+    st.markdown("Borderless styled section")
+```
+
+---
+
 ### Alert
 
 ```python
@@ -585,7 +645,7 @@ NAV_KEYS = {"Home": "nav_home", "Docs": "nav_docs"}
 with facade.Sidebar(
     logo="assets/logo.png",
     logo_width=180,
-    footer="v0.1.2",
+    footer="v0.1.4",
     active=st.session_state.page,
     nav_keys=NAV_KEYS,
 ):
@@ -619,7 +679,7 @@ facade.TopBar(title="My App", user="Daniyal", avatar="D")
 
 facade has a registry of **76 named icons**. The same name works in every component:
 - In `Button` / `LinkButton` — uses Material Symbols (native Streamlit)
-- In `Alert`, `Accordion`, `Toast`, `IconCard` — uses Lucide SVGs
+- In `Alert`, `Accordion`, `Toast`, `IconCard`, `StyledContainer` — uses Lucide SVGs
 
 ```python
 # In components — use facade icon name
@@ -720,6 +780,8 @@ st.markdown("""
 facade.Button("Custom", key="my_button")
 ```
 
+This is also how `StyledContainer` works internally — it injects CSS targeting `.st-key-{key}` on the container div.
+
 ---
 
 ## Multi-page Pattern
@@ -778,6 +840,7 @@ elif st.session_state.page == "Settings":
 - `facade.Tabs` returns a tuple — unpack it then use `with tab:` syntax
 - `facade.Accordion` and `facade.Sidebar` are context managers — use `with` syntax
 - `facade.Spinner` is a context manager — put work inside the `with` block
+- `facade.StyledContainer` is a context manager — `key` is required, put any Streamlit content inside
 - Icons use facade registry names, not Lucide names directly
 - `facade.icon_names()` returns the full list of 76 valid icon names
 - Never set `font-family` on `span` or `*` selectors — breaks Material Icons
@@ -790,7 +853,7 @@ elif st.session_state.page == "Settings":
 ## Package Info
 
 - **PyPI**: `pip install streamlit-facade`
-- **Version**: 0.1.2
+- **Version**: 0.1.4
 - **GitHub**: https://github.com/itsdaniyalm/streamlit-facade
 - **Requires**: Python 3.8+, Streamlit 1.35.0+
 - **License**: MIT
