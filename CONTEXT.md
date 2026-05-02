@@ -834,6 +834,8 @@ elif st.session_state.page == "Settings":
 
 ## Rules for LLMs
 
+- `--muted` is the component surface color (cards, inputs, containers). `--background` is the page background. Keep them distinct for proper visual hierarchy.
+- `StyledContainer` defaults to `var(--muted)` background — override with `background=` param if needed
 - Always use `key=` on every interactive component to avoid Streamlit duplicate key errors
 - `facade.Button` returns `bool` — use inside `if` for click handling
 - `facade.LinkButton` does NOT return bool — never use in `if` statement
@@ -853,7 +855,7 @@ elif st.session_state.page == "Settings":
 ## Package Info
 
 - **PyPI**: `pip install streamlit-facade`
-- **Version**: 0.1.4
+- **Version**: 0.1.5
 - **GitHub**: https://github.com/itsdaniyalm/streamlit-facade
 - **Requires**: Python 3.8+, Streamlit 1.35.0+
 - **License**: MIT

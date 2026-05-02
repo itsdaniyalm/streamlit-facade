@@ -25,7 +25,7 @@ def Button(
     """
     uid = key or label.lower().replace(" ", "_")
 
-    size_padding  = {"sm": "0.25rem 0.75rem", "md": "0.5rem 1rem",  "lg": "0.75rem 1.5rem"}
+    size_padding  = {"sm": "0.2rem 0.6rem", "md": "0.35rem 0.85rem",  "lg": "0.5rem 1.25rem"}
     font_size_map = {"sm": "0.8rem",           "md": "0.875rem",     "lg": "1rem"}
 
     padding   = size_padding.get(size,  size_padding["md"])
@@ -57,7 +57,7 @@ def Button(
                 font-family: var(--font-sans) !important;
                 font-weight: 500 !important;
                 width: auto !important;
-                min-width: 6rem !important;
+                min-width: unset !important;
                 transition: opacity 0.15s, background 0.15s !important;
             }}
             .st-key-{uid} button:hover {{ {hover} }}

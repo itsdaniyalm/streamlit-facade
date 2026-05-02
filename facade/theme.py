@@ -183,11 +183,11 @@ _PRESETS = {
     "daniyal": {
         "primary":            "#10274A",
         "primary_foreground": "#FFFFFF",
-        "background":         "#FFFFFF",
-        "foreground":         "#10274A",
-        "muted":              "#F0F4F8",
+        "background":         "#F5F7FB",
+        "foreground":         "#1C1917",
+        "muted":              "#FFFFFF",
         "muted_foreground":   "#184185",
-        "border":             "#D1DCF0",
+        "border":             "#E2E8F0",
         "destructive":        "#AF3280",
         "chrome_background":  "#10274A",
         "chrome_foreground":  "#E8EDF2",
@@ -397,7 +397,7 @@ def apply(
                 border-style: solid !important;
                 border-color: var(--border) !important;
                 border-radius: var(--radius) !important;
-                background-color: var(--background) !important;
+                background-color: var(--muted) !important;
                 box-shadow: none !important;
                 outline: none !important;
             }
@@ -432,7 +432,7 @@ def apply(
                 border-style: solid !important;
                 border-color: var(--border) !important;
                 border-radius: var(--radius) !important;
-                background-color: var(--background) !important;
+                background-color: var(--muted) !important;
                 box-shadow: none !important;
                 outline: none !important;
             }
@@ -469,7 +469,7 @@ def apply(
                 gap: 0.5rem !important;
             }
             div[data-testid="stCheckbox"] label span[data-baseweb="checkbox"] {
-                background-color: var(--background) !important;
+                background-color: var(--muted) !important;
                 border-width: 1px !important;
                 border-style: solid !important;
                 border-color: var(--border) !important;
@@ -498,7 +498,7 @@ def apply(
                 margin-bottom: 0.25rem !important;
             }
             div[data-testid="stRadio"] label span[data-baseweb="radio"] {
-                background-color: var(--background) !important;
+                background-color: var(--muted) !important;
                 border-width: 1px !important;
                 border-style: solid !important;
                 border-color: var(--border) !important;
@@ -586,7 +586,7 @@ def apply(
                 border-style: solid !important;
                 border-color: var(--border) !important;
                 border-radius: var(--radius) !important;
-                background-color: var(--background) !important;
+                background-color: var(--muted) !important;
                 box-shadow: none !important;
             }
             div[data-testid="stDateInput"] [data-baseweb="input"]:focus-within {
@@ -696,7 +696,7 @@ def apply(
                 padding: 0 !important;
             }
             div[data-testid="stProgress"] > div {
-                background-color: var(--muted) !important;
+                background-color: var(--border) !important;
                 border-radius: 9999px !important;
                 height: 0.5rem !important;
             }
@@ -722,7 +722,7 @@ def apply(
             div[data-testid="stExpander"] {
                 border: 1px solid var(--border) !important;
                 border-radius: var(--radius) !important;
-                background: var(--background) !important;
+                background: var(--muted) !important;
                 overflow: hidden !important;
                 margin: 0 !important;
             }
@@ -732,10 +732,10 @@ def apply(
                 font-weight: 500 !important;
                 color: var(--foreground) !important;
                 padding: 0.75rem 1rem !important;
-                background: var(--background) !important;
+                background: var(--muted) !important;
             }
             div[data-testid="stExpander"] summary:hover {
-                background: var(--muted) !important;
+                background: var(--border) !important;
             }
             div[data-testid="stExpander"] div[data-testid="stExpanderDetails"] {
                 border-top: 1px solid var(--border) !important;
@@ -751,7 +751,7 @@ def apply(
                 border-style: solid !important;
                 border-color: var(--border) !important;
                 border-radius: var(--radius) !important;
-                background-color: var(--background) !important;
+                background-color: var(--muted) !important;
                 color: var(--foreground) !important;
                 box-shadow: none !important;
                 outline: none !important;

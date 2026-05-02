@@ -7,7 +7,7 @@ def StyledContainer(
     border_color: str = "var(--border)",
     border_width: str = "2px",
     border_surround_color: str = "var(--border)",  # color for the other 3 sides when border != "all"
-    background: str = "var(--background)",
+    background: str = "var(--muted)",
     radius: str = "var(--radius)",
     padding: str = "1.25rem 1.5rem",
     key: str = None,

@@ -4,7 +4,7 @@ import streamlit as st
 def Card(title: str = None, description: str = None, key: str = None):
     st.markdown(f"""
         <div style="
-            background: var(--background);
+            background: var(--muted);
             border: 1px solid var(--border);
             border-radius: var(--radius);
             padding: 1.25rem 1.5rem;
